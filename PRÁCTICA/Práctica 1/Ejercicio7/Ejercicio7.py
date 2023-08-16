@@ -1,0 +1,1 @@
+print("V\nE\nR\nT\nI\nC\nA\nL")
