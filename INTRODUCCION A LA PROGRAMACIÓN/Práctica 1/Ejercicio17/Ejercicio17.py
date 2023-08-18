@@ -4,18 +4,46 @@ quinientosPesos = 500
 doscientosPesos = 200
 cienPesos = 100
 cincuentaPesos = 50
+veintePesos = 20
+diezPesos = 10
+cincoPesos = 5
+dosPesos = 2
+unPeso = 1
+
 #Le pido al usuario que ingrese el valor de la extracción
 monto = int(input("Por favor ingrese el monto que desea retirar "))
+
 #Realizo operaciones según los restos
-cociente1000 = monto // 1000
-resto1000 = monto % 1000
-cociente500 = resto1000 // 500
-resto500 = resto1000 % 500
-cociente200 = resto500 // 200
-resto200 = resto500 % 200
-cociente100 = resto200 // 100
-resto100 = resto200 % 100
-cociente50 = resto100 // 50
-resto50 = resto100 % 50
+#MIL PESOS
+cocienteMil = monto // milPesos
+restoMil = monto % milPesos
+#QUINIENTOS PESOS
+cocienteQuinientos = restoMil // quinientosPesos
+restoQuinientos = restoMil % quinientosPesos
+#DOSCIENTOS PESOS
+cocienteDoscientos = restoQuinientos // doscientosPesos
+restoDoscientos = restoQuinientos % doscientosPesos
+#CIEN PESOS
+cocienteCien = restoDoscientos // cienPesos
+restoCien = restoDoscientos % cienPesos
+#CINCUENTA PESOS
+cocienteCincuenta = restoCien // cincuentaPesos
+restoCincuenta = restoCien % cincuentaPesos
+#VEINTE PESOS
+cocienteVeinte = restoCincuenta // veintePesos
+restoVeinte = restoCincuenta % veintePesos
+#DIEZ PESOS
+cocienteDiez = restoVeinte // diezPesos
+restoDiez = restoVeinte % diezPesos
+#CINCO PESOS
+cocienteCinco = restoDiez // cincoPesos
+restoCinco = restoDiez % cincoPesos
+#DOS PESOS
+cocienteDos = restoCinco // dosPesos
+restoDos = restoCinco % dosPesos
+#UN PESO
+cocienteUn = restoDos // unPeso
+restoUn = restoDos % unPeso
+
 #Imprimo un mensaje en pantalla
-print("\n******************************\n*  Usted recibirá:\n*", cociente1000," billetes de $ 1000   \n*", cociente500," billetes de $ 500   \n*", cociente200," billetes de $ 200   \n*", cociente100," billetes de $ 100   \n*", cociente50," billetes de $ 50   \n* El monto restante en el cajero es de:$",resto50,"\n*****************************")
+print("\n******************************\n*  Usted recibirá:\n*", cocienteMil," billete(s) de $ 1000   \n*", cocienteQuinientos," billete(s) de $ 500   \n*", cocienteDoscientos," billete(s) de $ 200   \n*", cocienteCien," billete(s) de $ 100   \n*", cocienteCincuenta," billete(s) de $ 50   \n*", cocienteVeinte," billete(s) de $20  \n*",cocienteDiez," billete(s) de $10   \n*", cocienteCinco," billete(s) de $5  \n*",cocienteDos," moneda(s) de $2  \n*",cocienteUn," moneda(s) de $1  \n*****************************")
